@@ -1,5 +1,5 @@
 
-v= VideoReader('"C:\Users\zivsh\OneDrive - mail.tau.ac.il\uni\מעבדה\ג1\טומוגרפיה קוונטית\ZIV AND TOMER PART 1\25 bit measurments.mp4"');
+v= VideoReader('C:\Users\<INSERT PATH>.mp4');
 for i=1:1:30
 frame = read(v,i);
 
@@ -20,5 +20,6 @@ end
 plot(D2) 
 
 
-pcolor(frame(:,:,1))
-shading flat
+%pcolor(frame(:,:,1))
+
+%shading flat
