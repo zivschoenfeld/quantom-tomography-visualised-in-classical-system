@@ -5,13 +5,13 @@
 ![JUPYTER](https://img.shields.io/badge/-Jupyter%20Notebook-05122A?style=flat&logo=jupyter&logoColor=F37626)
 
 ## Overview
-Developed as part of a lab project for the Physics Laboratory C course at Tel Aviv University, this repository uses computer vision to analyze video recordings of a pulsed laser experiment. The setup emulates quantum entanglement, performing Quantum State Tomography (QST) and Bell inequality tests using classical optical components.
+Developed for a lab project in the Physics Laboratory C course at Tel Aviv University, this repository uses computer vision to analyze video input of a pulsed laser experiment. The setup emulates quantum entanglement, emulating the workflow of Quantum State Tomography (QST) and Bell inequality tests using classical optical components.
 
-#### This project is based on the experiment and analysis described in the paper  [**"Optical emulation of quantum state tomography and Bell test—A novel undergraduate experiment"** (Results in Optics, 2025)](https://doi.org/10.1016/j.rio.2025.100847).
+#### This project is based on the experiment and analysis described in the paper  [**"Optical emulation of quantum state tomography and Bell test—A novel undergraduate experiment"** (Results in Optics, 2025)](https://doi.org/10.1016/j.rio.2025.100847), by Arbel et al. 
 
 ## Project Context
 
-The experiment utilizes a pulsed laser source with randomized polarization to simulate single-photon states found in quantum mechanics. The light is split and sent to two detectors ("Alice" and "Bob"), each measuring specific polarization bases (Horizontal/Vertical).
+The experiment utilizes a pulsed laser source with randomized polarization to emulate single-photon emitors that are in use in quantum mechanics experiments. The laser pulse propagates through a beam splitter and sent to two detector stations ("Alice" and "Bob"),  each capable of measuring specific polarization bases (Horizontal/Vertical).
 
 This Python script performs the data acquisition and verification step of the experiment:
 1.  **Video Analysis**: It processes video footage of the optical detectors (webcams).
