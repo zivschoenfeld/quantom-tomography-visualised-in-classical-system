@@ -15,13 +15,13 @@ The experiment utilizes a pulsed laser source with randomized polarization to em
 
 This Python script performs the data acquisition and verification step of the experiment:
 1.  **Video Analysis**: It processes video footage of the optical detectors (webcams).
-2.  **Pulse Detection**: It identifies light pulses corresponding to quantum bits (0s and 1s) by tracking intensity changes in the Red channel.
+2.  **Pulse Detection**: It identifies light pulses corresponding to quantum bits (0s and 1s) by tracking intensity in the red color spectrum of each frame.
 3.  **Verification**: It compares the detected optical signals against a pre-generated "Ground Truth" random bit sequence to validate the experimental setup's accuracy.
 
 ## Features
 
 * **Interactive ROI Selection**: Users manually identify the four signal regions (Alice V, Alice H, Bob V, Bob H) on the first frame of the video using a GUI.
-* **Signal Processing**: Automated frame-by-frame extraction of light intensity from the selected regions.
+* **Signal Processing**: Automated frame-by-frame extraction of light intensity from the selected regions and red light filtering.
 * **Peak Detection**: Utilizes `scipy.signal.find_peaks` to distinguish signal pulses from noise and background light.
 * **Bit Sequence Validation**: Automatically imports expected random bit sequences (10, 25, or 50 bits) from an Excel file (`part one bit.xlsx`) to calculate transmission error rates.
 * **Data Visualization**: Generates and saves plots showing the normalized signal intensity, threshold levels, and detected peaks.
@@ -77,7 +77,7 @@ video_path = r"path\to\your\video_file.mp4"
 ## Code Logic
 
 1. **Initialization**: The script parses the video filename to determine if the expected bit count is 10, 25, or 50.
-2. **Processing**: It iterates through every frame, summing the **Red channel** intensity within the user-defined ROIs.
+2. **Processing**: It iterates through every frame, filtering for red color only and summing the intensity within the user-defined ROIs.
 3. **Analysis**:
 * Signals are normalized.
 * Peaks are detected using `find_peaks` based on specific height thresholds to ignore noise.
