@@ -74,16 +74,13 @@ video_path = r"path\to\your\video_file.mp4"
 * The script prints the count of detected Vertical vs. Horizontal bits.
 * It saves plots (e.g., `measurments and peaks...png`) showing the raw signal and detected pulses for analysis.
 
-## Code Logic
-
-1. **Initialization**: The script parses the video filename to determine if the expected bit count is 10, 25, or 50.
-2. **Processing**: It iterates through every frame, filtering for red color only and summing the intensity within the user-defined ROIs.
-3. **Analysis**:
-* Signals are normalized.
-* Peaks are detected using `find_peaks` based on specific height thresholds to ignore noise.
-* Detected peaks are compared against the ground truth Excel data.
-
-
+5. **Improtant Functions**
+* **get_stat()** : Returns theoretical state for simulation based on input psi (either "psi_1" , "psi_2" or "mixed")
+* **simulate_measurement()** : Simulates photon counts for specific polarizer angles.
+* **reconstruct_density_matrix()** : Calculates the |D>, |A> states using peaks count data and reconstructs the density matrix.
+* **plot_3d_matrix()** : Plots the reconstructed density matrix.
+* **image_analysis()** : Analyzes the video frames, converts to numpy array and filteres for red light only, sums up the red light numpy array and returns a list of the summed values for each ROI in each frame, using                           the  if ROI=True, allows to manually select ROI using the first frame, if ROI=False uses the given ROI.
+* **count_coincidences** : Counts the number of of mutual peaks between "Alice" and "Bob" cameras by checking if they are within set frame distance.
 ## Authors
 - [Ziv Schoenfeld](https://github.com/zivschoenfeld)
 - [Tomer Lahav](https://github.com/TomerLahav)
