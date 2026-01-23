@@ -75,6 +75,7 @@ video_path = r"path\to\your\video_file.mp4"
 * It saves plots (e.g., `measurments and peaks...png`) showing the raw signal and detected pulses for analysis.
 
 5. **Improtant Functions**
+* **define_camera_gary.m** : Matlab code to connect to the cameras and view their output live.
 * **get_stat()** : Returns theoretical state for simulation based on input psi (either "psi_1" , "psi_2" or "mixed")
 * **simulate_measurement()** : Simulates photon counts for specific polarizer angles.
 * **reconstruct_density_matrix()** : Calculates the |D>, |A> states using peaks count data and reconstructs the density matrix.
