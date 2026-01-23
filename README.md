@@ -1,4 +1,4 @@
-# Quantom Tomography Visualised Using a Classical System
+# Quantum Tomography Emulation with Classical Optical System
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![matlab - R2020b](https://img.shields.io/badge/matlab-R2020b%2B-orange)
