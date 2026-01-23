@@ -34,7 +34,7 @@ To run the analysis, you need Python installed with the following libraries:
 * **NumPy** & **Pandas**: For data handling and signal array manipulation.
 * **Matplotlib**: For generating signal graphs.
 * **SciPy**: For the peak detection algorithm.
-* **OpenPyXL**: For reading the Excel ground truth file.
+* **OpenPyXL**: For reading the Excel file.
 
 ### Installation
 
